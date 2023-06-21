@@ -128,11 +128,11 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="BLL\BLL.csproj">
+    <ProjectReference Include="..\BLL\BLL.csproj">
       <Project>{0cfb95af-6801-4751-9ce1-f25610e097f6}</Project>
       <Name>BLL</Name>
     </ProjectReference>
-    <ProjectReference Include="DTO\DTO.csproj">
+    <ProjectReference Include="..\DTO\DTO.csproj">
       <Project>{881fffe7-bf41-40a4-868d-bfcf07049b9e}</Project>
       <Name>DTO</Name>
     </ProjectReference>
