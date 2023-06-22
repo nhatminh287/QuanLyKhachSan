@@ -87,23 +87,30 @@ namespace QuanLyKhachSanGUI
 
         private void button1_Click(object sender, EventArgs e)
         {
-            YeuCauDatPhongDTO y = new YeuCauDatPhongDTO();
-            //DateTime selectedDate = dateTimePicker1.Value;
-            //MessageBox.Show(selectedDate.ToString("yyyy-MM-dd"));
+            if (comboBox1.Text == "" || textBox5.Text == "" || textBox3.Text == "" || comboBox2.Text == "")
+            {
+                MessageBox.Show("Hãy điền đầy đủ thông tin đặt phòng!", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                YeuCauDatPhongDTO y = new YeuCauDatPhongDTO();
+                //DateTime selectedDate = dateTimePicker1.Value;
+                //MessageBox.Show(selectedDate.ToString("yyyy-MM-dd"));
 
-            y.NgayDen = dateTimePicker1.Text;
+                y.NgayDen = dateTimePicker1.Text;
 
-            y.SoDemLuTru = int.Parse(textBox5.Text);
+                y.SoDemLuTru = int.Parse(textBox5.Text);
 
-            y.Phong = int.Parse(textBox4.Text);
+                y.Phong = int.Parse(textBox4.Text);
 
-            y.YeuCauDacBiet = textBox3.Text;
-            y.MaKH = int.Parse(comboBox2.Text); 
-            y.NhanVienTiepNhan = int.Parse(comboBox1.Text);
-            
-            bool kq = YeuCauDatPhong.Themyeucaudatphong(y);
-            if (kq)
-                MessageBox.Show("Thêm thành công!");
+                y.YeuCauDacBiet = textBox3.Text;
+                y.MaKH = int.Parse(comboBox2.Text);
+                y.NhanVienTiepNhan = int.Parse(comboBox1.Text);
+
+                bool kq = YeuCauDatPhong.Themyeucaudatphong(y);
+                if (kq)
+                    MessageBox.Show("Thêm thành công!");
+            }
         }
     }
 }
