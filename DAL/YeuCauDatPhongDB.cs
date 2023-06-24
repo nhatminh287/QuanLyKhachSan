@@ -65,6 +65,7 @@ namespace DAL
                 YeuCauDatPhongDTO yc = new YeuCauDatPhongDTO();
                 yc.ID = id;
                 yc.NgayDen = nd.ToString();
+                yc.SoDemLuTru = sd;
                 yc.Phong = p;
                 yc.YeuCauDacBiet = y;
                 yc.MaKH = makh;
