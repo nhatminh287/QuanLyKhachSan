@@ -14,5 +14,13 @@ namespace BLL
         {
             return NhanVienDB.LaydsNhanvien();
         }
+        public static List<NhanVienDTO> LayDanhSachNvVanChuyen()
+        {
+            return NhanVienDB.LayDanhSachNvVanChuyen();
+        }
+        public static string TenNhanVien(int MaNV)
+        {
+            return NhanVienDB.TenNhanVien(MaNV);
+        }
     }
 }

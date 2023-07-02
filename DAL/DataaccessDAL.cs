@@ -11,7 +11,7 @@ namespace DAL
     public class DataaccessDAL
     {
         public static SqlConnection conec = null;
-        public static string strconec = @"Data Source=DESKTOP-RR82V1P\MSSQLSERVER01;Initial Catalog=QuanLyKhachSan;User ID=sa;Password=1234";
+        public static string strconec = @"Data Source=LAPTOP-9UBO3DBS;Initial Catalog=QuanLyKhachSan;User ID=sa;Password=thi2522002";
         public static void Moketnoi()
         {
             if (conec==null)

@@ -20,5 +20,9 @@ namespace BLL
         {
             return YeuCauDatPhongDB.LaydsYeuCauDatPhong();
         }
+        public static bool CapNhatTinhTrang(int ID)
+        {
+            return YeuCauDatPhongDB.CapNhatTinhTrang(ID);
+        }
     }
 }

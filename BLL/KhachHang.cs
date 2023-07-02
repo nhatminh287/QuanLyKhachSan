@@ -19,5 +19,9 @@ namespace BLL
         {
             return KhachHangDB.Themkhachhang(kh);
         }
+        public static string TenKhachHang(int MaKH)
+        {
+            return KhachHangDB.TenKhachHang(MaKH);
+        }
     }
 }

@@ -40,5 +40,13 @@ namespace QuanLyKhachSanGUI
             form.ShowDialog();
             Show();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            MHDanhSachDKVanChuyen form = new MHDanhSachDKVanChuyen();
+            Hide();
+            form.ShowDialog();
+            Show();
+        }
     }
 }

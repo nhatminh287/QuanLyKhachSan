@@ -17,7 +17,12 @@ namespace QuanLyKhachSanGUI
         public MHxemyeucaudatphong()
         {
             InitializeComponent();
-            
+
+            LoadData();
+        }
+
+        private void LoadData()
+        {
             List<YeuCauDatPhongDTO> dsyeucaudatphong = YeuCauDatPhong.laydsyeucaudatphong();
             listView1.Items.Clear();
             foreach (YeuCauDatPhongDTO p in dsyeucaudatphong)
@@ -33,5 +38,29 @@ namespace QuanLyKhachSanGUI
             }
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (listView1.SelectedItems.Count ==1)
+            {
+                ListViewItem selectedRow = listView1.SelectedItems[0];
+                YeuCauDatPhongDTO ycdp = new YeuCauDatPhongDTO();
+                ycdp.ID = int.Parse(selectedRow.SubItems[0].Text);
+                ycdp.NgayDen = selectedRow.SubItems[1].Text;
+                ycdp.SoDemLuTru = int.Parse(selectedRow.SubItems[2].Text);
+                ycdp.Phong = int.Parse(selectedRow.SubItems[3].Text);
+                ycdp.YeuCauDacBiet = selectedRow.SubItems[4].Text;
+                ycdp.MaKH = int.Parse(selectedRow.SubItems[5].Text);
+                ycdp.NhanVienTiepNhan = int.Parse(selectedRow.SubItems[6].Text);
+                MHTiepNhanYeuCau form = new MHTiepNhanYeuCau(ycdp);
+                Hide();
+                form.ShowDialog();
+                Show();
+                LoadData();
+            }    
+            else
+            {
+                MessageBox.Show("Hãy chọn một yêu cầu đặt phòng!", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
     }
 }
