@@ -49,7 +49,7 @@ namespace DAL
             Moketnoi();
             SqlCommand command = new SqlCommand();
             command.CommandType = System.Data.CommandType.Text;
-            command.CommandText = "select * from YeuCauDatPhong";
+            command.CommandText = "select * from YeuCauDatPhong where TinhTrang = 0";
             command.Connection = conec;
             SqlDataReader reader = command.ExecuteReader();
             while (reader.Read())
@@ -76,9 +76,21 @@ namespace DAL
             Dongketnoi();
             return dsYeuCauDatPhong;
         }
-        
-    }
-    
+        public static bool CapNhatTinhTrang(int ID)
+        {
+            Moketnoi();
+            SqlCommand command = new SqlCommand();
+            command.CommandType = System.Data.CommandType.Text;
+            command.CommandText = "UPDATE YeuCauDatPhong SET TinhTrang = 1 WHERE ID = @id";
+            command.Connection = conec;
+            command.Parameters.Add("@id", SqlDbType.Int).Value = ID;
 
+            int kq = command.ExecuteNonQuery();
+
+            Dongketnoi();
+
+            return kq > 0;
+        }
+    }
 }
 

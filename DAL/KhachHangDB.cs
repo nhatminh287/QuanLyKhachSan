@@ -87,5 +87,29 @@ namespace DAL
             reader.Close();
             return dsKhachHang;
         }
+        public static string TenKhachHang(int MaNV)
+        {
+            Moketnoi();
+
+            SqlCommand command = new SqlCommand();
+            command.CommandType = System.Data.CommandType.Text;
+            command.CommandText = "select TenKH from KhachHang where MaKH = @id";
+            command.Parameters.AddWithValue("@id", MaNV);
+            command.Connection = conec;
+
+            SqlDataReader reader = command.ExecuteReader();
+
+            string tenKhachHang = string.Empty;
+            if (reader.Read())
+            {
+                tenKhachHang = reader.GetString(0);
+            }
+
+            reader.Close();
+            Dongketnoi();
+
+            return tenKhachHang;
+
+        }
     }
 }

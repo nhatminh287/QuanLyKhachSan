@@ -47,6 +47,7 @@
     <Compile Include="NhanVien.cs" />
     <Compile Include="Phong.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VanChuyenHanhLy.cs" />
     <Compile Include="YeuCauDatPhong.cs" />
   </ItemGroup>
   <ItemGroup>

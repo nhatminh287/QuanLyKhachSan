@@ -38,6 +38,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -54,6 +55,18 @@
     </Compile>
     <Compile Include="MHchucnang.Designer.cs">
       <DependentUpon>MHchucnang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MHDangKiVanChuyen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MHDangKiVanChuyen.Designer.cs">
+      <DependentUpon>MHDangKiVanChuyen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MHDanhSachDKVanChuyen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MHDanhSachDKVanChuyen.Designer.cs">
+      <DependentUpon>MHDanhSachDKVanChuyen.cs</DependentUpon>
     </Compile>
     <Compile Include="MHdanhsachphong.cs">
       <SubType>Form</SubType>
@@ -79,6 +92,12 @@
     <Compile Include="MHthongtinkhachhang.Designer.cs">
       <DependentUpon>MHthongtinkhachhang.cs</DependentUpon>
     </Compile>
+    <Compile Include="MHTiepNhanYeuCau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MHTiepNhanYeuCau.Designer.cs">
+      <DependentUpon>MHTiepNhanYeuCau.cs</DependentUpon>
+    </Compile>
     <Compile Include="MHxemyeucaudatphong.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,6 +108,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="MHchucnang.resx">
       <DependentUpon>MHchucnang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MHDangKiVanChuyen.resx">
+      <DependentUpon>MHDangKiVanChuyen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MHDanhSachDKVanChuyen.resx">
+      <DependentUpon>MHDanhSachDKVanChuyen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MHdanhsachphong.resx">
       <DependentUpon>MHdanhsachphong.cs</DependentUpon>
@@ -101,6 +126,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MHthongtinkhachhang.resx">
       <DependentUpon>MHthongtinkhachhang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MHTiepNhanYeuCau.resx">
+      <DependentUpon>MHTiepNhanYeuCau.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MHxemyeucaudatphong.resx">
       <DependentUpon>MHxemyeucaudatphong.cs</DependentUpon>

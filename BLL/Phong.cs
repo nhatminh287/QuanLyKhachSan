@@ -18,5 +18,13 @@ namespace BLL
         {
             return PhongDB.Themphong(p);
         }
+        public static int TinhTrangVeSinh(int MaPhong)
+        {
+            return PhongDB.TinhTrangVeSinh(MaPhong);
+        }
+        public static bool DonVeSinhPhong(int MaPhong)
+        {
+            return PhongDB.DonVeSinhPhong(MaPhong);
+        }
     }
 }

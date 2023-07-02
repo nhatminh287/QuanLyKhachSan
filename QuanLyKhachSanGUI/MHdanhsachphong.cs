@@ -74,7 +74,7 @@ namespace QuanLyKhachSanGUI
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text == "" || textBox2.Text == "" || textBox3.Text == "" || textBox4.Text == "" || textBox5.Text == "")
+            if (textBox2.Text == "" || textBox3.Text == "" || textBox4.Text == "" || textBox5.Text == "")
             {
                 MessageBox.Show("Hãy nhập thông tin trước khi thêm phòng phòng!", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }

@@ -67,5 +67,41 @@ namespace DAL
             Dongketnoi();
             return kq > 0;
         }
+        public static int TinhTrangVeSinh(int MaPhong)
+        {
+            int tinhTrangVeSinh = 0;
+
+            Moketnoi();
+            SqlCommand command = new SqlCommand();
+            command.CommandType = System.Data.CommandType.Text;
+            command.CommandText = "SELECT TinhTrangVeSinh FROM Phong WHERE MaPhong = @id";
+            command.Connection = conec;
+            command.Parameters.Add("@id", SqlDbType.Int).Value = MaPhong;
+
+            SqlDataReader reader = command.ExecuteReader();
+            if (reader.Read())
+            {
+                tinhTrangVeSinh = reader.GetInt32(0);
+            }
+
+            reader.Close();
+            Dongketnoi();
+
+            return tinhTrangVeSinh;
+        }
+        public static bool DonVeSinhPhong(int MaPhong) {
+            Moketnoi();
+            SqlCommand command = new SqlCommand();
+            command.CommandType = System.Data.CommandType.Text;
+            command.CommandText = "UPDATE Phong SET TinhTrangVeSinh = 1 WHERE MaPhong = @id";
+            command.Connection = conec;
+            command.Parameters.Add("@id", SqlDbType.Int).Value = MaPhong;
+
+            int kq = command.ExecuteNonQuery();
+
+            Dongketnoi();
+
+            return kq > 0;
+        }
     }
 }

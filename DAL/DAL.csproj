@@ -51,6 +51,7 @@
     <Compile Include="NhanVienDB.cs" />
     <Compile Include="PhongDB.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VanChuyenHanhLyDB.cs" />
     <Compile Include="YeuCauDatPhongDB.cs" />
   </ItemGroup>
   <ItemGroup>

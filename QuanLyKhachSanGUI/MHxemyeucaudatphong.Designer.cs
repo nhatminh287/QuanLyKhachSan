@@ -37,6 +37,8 @@ namespace QuanLyKhachSanGUI
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Email = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.MaDoan = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.TiepNhanYeuCau = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // listView1
@@ -52,7 +54,7 @@ namespace QuanLyKhachSanGUI
             this.listView1.FullRowSelect = true;
             this.listView1.GridLines = true;
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(35, 44);
+            this.listView1.Location = new System.Drawing.Point(51, 102);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(771, 394);
             this.listView1.TabIndex = 15;
@@ -94,15 +96,42 @@ namespace QuanLyKhachSanGUI
             this.MaDoan.Text = "Nhân viên tiếp nhận";
             this.MaDoan.Width = 100;
             // 
+            // TiepNhanYeuCau
+            // 
+            this.TiepNhanYeuCau.BackColor = System.Drawing.SystemColors.Control;
+            this.TiepNhanYeuCau.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.TiepNhanYeuCau.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.TiepNhanYeuCau.Location = new System.Drawing.Point(314, 517);
+            this.TiepNhanYeuCau.Name = "TiepNhanYeuCau";
+            this.TiepNhanYeuCau.Size = new System.Drawing.Size(232, 52);
+            this.TiepNhanYeuCau.TabIndex = 16;
+            this.TiepNhanYeuCau.Text = "Tiếp nhận yêu cầu";
+            this.TiepNhanYeuCau.UseVisualStyleBackColor = false;
+            this.TiepNhanYeuCau.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Cambria", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.label7.Location = new System.Drawing.Point(225, 22);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(381, 51);
+            this.label7.TabIndex = 34;
+            this.label7.Text = "Yêu cầu đặt phòng";
+            // 
             // MHxemyeucaudatphong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(867, 485);
+            this.ClientSize = new System.Drawing.Size(866, 593);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.TiepNhanYeuCau);
             this.Controls.Add(this.listView1);
             this.Name = "MHxemyeucaudatphong";
-            this.Text = "MHxemyeucaudatphong";
+            this.Text = "Danh sách yêu cầu đặt phòng";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -116,5 +145,7 @@ namespace QuanLyKhachSanGUI
         private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.ColumnHeader Email;
         private System.Windows.Forms.ColumnHeader MaDoan;
+        private System.Windows.Forms.Button TiepNhanYeuCau;
+        private System.Windows.Forms.Label label7;
     }
 }
