@@ -39,6 +39,7 @@ namespace QuanLyKhachSanGUI
             this.MaDoan = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.TiepNhanYeuCau = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // listView1
@@ -50,7 +51,8 @@ namespace QuanLyKhachSanGUI
             this.columnHeader4,
             this.columnHeader5,
             this.Email,
-            this.MaDoan});
+            this.MaDoan,
+            this.columnHeader1});
             this.listView1.FullRowSelect = true;
             this.listView1.GridLines = true;
             this.listView1.HideSelection = false;
@@ -120,6 +122,10 @@ namespace QuanLyKhachSanGUI
             this.label7.TabIndex = 34;
             this.label7.Text = "Yêu cầu đặt phòng";
             // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Tình trạng";
+            // 
             // MHxemyeucaudatphong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -147,5 +153,6 @@ namespace QuanLyKhachSanGUI
         private System.Windows.Forms.ColumnHeader MaDoan;
         private System.Windows.Forms.Button TiepNhanYeuCau;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
     }
 }

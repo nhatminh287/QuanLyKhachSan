@@ -34,13 +34,21 @@ namespace QuanLyKhachSanGUI
                 lvi.SubItems.Add(p.YeuCauDacBiet + "");
                 lvi.SubItems.Add(p.MaKH + "");
                 lvi.SubItems.Add(p.NhanVienTiepNhan + "");
+                if(p.TinhTrang == 1)
+                {
+                    lvi.SubItems.Add("Đã hoàn tất");
+                }
+                else
+                {
+                    lvi.SubItems.Add("Chưa hoàn tất");
+                }
                 listView1.Items.Add(lvi);
             }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (listView1.SelectedItems.Count ==1)
+            if (listView1.SelectedItems.Count ==1 && listView1.SelectedItems[0].SubItems[7].Text == "Chưa hoàn tất")
             {
                 ListViewItem selectedRow = listView1.SelectedItems[0];
                 YeuCauDatPhongDTO ycdp = new YeuCauDatPhongDTO();
@@ -57,9 +65,13 @@ namespace QuanLyKhachSanGUI
                 Show();
                 LoadData();
             }    
-            else
+            else if(listView1.SelectedItems.Count == 0)
             {
                 MessageBox.Show("Hãy chọn một yêu cầu đặt phòng!", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Yêu cầu này đã hoàn tất. Hãy chọn yêu cầu khác!", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
     }

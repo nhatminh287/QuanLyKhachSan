@@ -68,7 +68,7 @@ namespace QuanLyKhachSanGUI
                 VanChuyen.NVVanChuyen = int.Parse(comboBox1.SelectedItem.ToString().Substring(1, comboBox1.SelectedItem.ToString().IndexOf(' ')));
                 if( VanChuyenHanhLy.ThemVCHL(VanChuyen) && YeuCauDatPhong.CapNhatTinhTrang(ID) )
                 {
-                    MessageBox.Show("Đăng kí thành công!");
+                    MessageBox.Show("Đăng kí thành công!", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Close();
                 }    
             }
