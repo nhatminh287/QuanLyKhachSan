@@ -110,5 +110,30 @@ namespace QuanLyKhachSanGUI
 
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (comboBox1.Text == "" || textBox1.Text == "" || textBox2.Text == "" || textBox3.Text == "" || textBox4.Text == "" || textBox5.Text == "" || textBox6.Text == "")
+            {
+                MessageBox.Show("Hãy điền đầy đủ thông tin trước khi cập nhật!", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                KhachHangDTO k = new KhachHangDTO();
+                k.MaKH = int.Parse(textBox1.Text);
+                k.TenKH = textBox2.Text;
+                k.DiaChi = textBox3.Text;
+                k.SoDienThoai = textBox4.Text;
+                k.SoFax = textBox5.Text;
+                k.Email = textBox6.Text;
+                k.MaDoan = int.Parse(comboBox1.Text);
+
+                bool kq = KhachHang.Capnhatkhachhang(k);
+                if (kq)
+                    MessageBox.Show("Cập nhật thành công!");
+                ShowListView();
+
+            }
+        }
     }
 }

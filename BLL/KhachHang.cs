@@ -23,5 +23,9 @@ namespace BLL
         {
             return KhachHangDB.TenKhachHang(MaKH);
         }
+        public static bool Capnhatkhachhang(KhachHangDTO kh)
+        {
+            return KhachHangDB.Capnhatkhachhang(kh);
+        }
     }
 }

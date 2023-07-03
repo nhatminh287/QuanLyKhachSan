@@ -37,9 +37,9 @@ namespace QuanLyKhachSanGUI
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Email = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.MaDoan = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.TiepNhanYeuCau = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // listView1
@@ -58,7 +58,7 @@ namespace QuanLyKhachSanGUI
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(51, 102);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(771, 394);
+            this.listView1.Size = new System.Drawing.Size(809, 394);
             this.listView1.TabIndex = 15;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -98,6 +98,11 @@ namespace QuanLyKhachSanGUI
             this.MaDoan.Text = "Nhân viên tiếp nhận";
             this.MaDoan.Width = 100;
             // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Tình trạng";
+            this.columnHeader1.Width = 100;
+            // 
             // TiepNhanYeuCau
             // 
             this.TiepNhanYeuCau.BackColor = System.Drawing.SystemColors.Control;
@@ -122,15 +127,11 @@ namespace QuanLyKhachSanGUI
             this.label7.TabIndex = 34;
             this.label7.Text = "Yêu cầu đặt phòng";
             // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "Tình trạng";
-            // 
             // MHxemyeucaudatphong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(866, 593);
+            this.ClientSize = new System.Drawing.Size(907, 593);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.TiepNhanYeuCau);
             this.Controls.Add(this.listView1);

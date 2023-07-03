@@ -62,7 +62,7 @@ namespace DAL
 
                 int makh = reader.GetInt32(5);
                 int nv = reader.GetInt32(6);
-                int TinhTrang = reader.GetInt32(8);
+                int TinhTrang = reader.GetInt32(7);
                 YeuCauDatPhongDTO yc = new YeuCauDatPhongDTO();
                 yc.ID = id;
                 yc.NgayDen = nd.ToString();

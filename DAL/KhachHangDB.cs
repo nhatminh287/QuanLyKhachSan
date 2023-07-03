@@ -111,5 +111,34 @@ namespace DAL
             return tenKhachHang;
 
         }
+        public static bool Capnhatkhachhang(KhachHangDTO d)
+        {
+
+            DataaccessDAL.Moketnoi();
+
+            SqlCommand command = new SqlCommand();
+
+            command.CommandType = System.Data.CommandType.Text;
+            if (d.MaDoan == 0)
+                command.CommandText = "update KhachHang set TenKH = @ten, DiaChi = @dc, SoDienThoai = @sdt, SoFax = @fax, Email = @email, MaDoan = null where MaKH = @makh";
+            else
+                command.CommandText = "update KhachHang set TenKH = @ten, DiaChi = @dc, SoDienThoai = @sdt, SoFax = @fax, Email = @email, MaDoan = @madoan  where MaKH = @makh";
+
+            command.Connection = DataaccessDAL.conec;
+            command.Parameters.Add("@makh", SqlDbType.Int).Value = d.MaKH;
+
+            command.Parameters.Add("@ten", SqlDbType.NVarChar).Value = d.TenKH;
+
+            command.Parameters.Add("@dc", SqlDbType.NVarChar).Value = d.DiaChi;
+
+            command.Parameters.Add("@sdt", SqlDbType.VarChar).Value = d.SoDienThoai;
+            command.Parameters.Add("@fax", SqlDbType.VarChar).Value = d.SoFax;
+            command.Parameters.Add("@email", SqlDbType.VarChar).Value = d.Email;
+            command.Parameters.Add("@madoan", SqlDbType.Int).Value = d.MaDoan;
+
+            int kq = command.ExecuteNonQuery();
+            DataaccessDAL.Dongketnoi();
+            return kq > 0;
+        }
     }
 }
