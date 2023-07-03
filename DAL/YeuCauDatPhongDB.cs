@@ -49,7 +49,7 @@ namespace DAL
             Moketnoi();
             SqlCommand command = new SqlCommand();
             command.CommandType = System.Data.CommandType.Text;
-            command.CommandText = "select * from YeuCauDatPhong where TinhTrang = 0";
+            command.CommandText = "select * from YeuCauDatPhong";
             command.Connection = conec;
             SqlDataReader reader = command.ExecuteReader();
             while (reader.Read())
@@ -62,6 +62,7 @@ namespace DAL
 
                 int makh = reader.GetInt32(5);
                 int nv = reader.GetInt32(6);
+                int TinhTrang = reader.GetInt32(8);
                 YeuCauDatPhongDTO yc = new YeuCauDatPhongDTO();
                 yc.ID = id;
                 yc.NgayDen = nd.ToString();
@@ -70,6 +71,7 @@ namespace DAL
                 yc.YeuCauDacBiet = y;
                 yc.MaKH = makh;
                 yc.NhanVienTiepNhan = nv;
+                yc.TinhTrang = TinhTrang;
                 dsYeuCauDatPhong.Add(yc);
             }
             reader.Close();

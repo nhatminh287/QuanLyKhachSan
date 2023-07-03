@@ -15,6 +15,6 @@ namespace DTO
         public string YeuCauDacBiet { get; set; }
         public int MaKH { get; set; }
         public int NhanVienTiepNhan { get; set; }
-
+        public int TinhTrang { get; set; }
     }
 }

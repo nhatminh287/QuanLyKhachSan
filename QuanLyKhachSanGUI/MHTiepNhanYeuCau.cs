@@ -34,6 +34,7 @@ namespace QuanLyKhachSanGUI
                 textBox10.Text = "Đã dọn dẹp";
                 button2.Enabled = false;
                 button1.Enabled = true;
+                button3.Enabled = true;
 
             }
             else
@@ -41,6 +42,7 @@ namespace QuanLyKhachSanGUI
                 textBox10.Text = "Chưa dọn dẹp";
                 button2.Enabled = true;
                 button1.Enabled = false;
+                button3.Enabled = false;
             }
             
         }
@@ -67,13 +69,16 @@ namespace QuanLyKhachSanGUI
                     textBox10.Text = "Đã dọn dẹp";
                     button2.Enabled = false;
                     button1.Enabled = true;
+                    button3.Enabled = true;
 
                 }
                 else
                 {
                     textBox10.Text = "Chưa dọn dẹp";
                     button2.Enabled = true;
+                    button3.Enabled = false;
                     button1.Enabled = false;
+                    
                 }
             }
             else
@@ -82,5 +87,16 @@ namespace QuanLyKhachSanGUI
             }    
             
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (YeuCauDatPhong.CapNhatTinhTrang(ycdp.ID))
+            {
+                MessageBox.Show("Hoàn tất!", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
+            }
+        }
+
+     
     }
 }
