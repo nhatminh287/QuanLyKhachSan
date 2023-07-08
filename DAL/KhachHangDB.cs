@@ -36,6 +36,7 @@ namespace DAL
             command.Parameters.Add("@dc", SqlDbType.NVarChar).Value = kh.DiaChi;
 
             command.Parameters.Add("@sdt", SqlDbType.VarChar).Value = kh.SoDienThoai;
+            command.Parameters.Add("@sofax", SqlDbType.VarChar).Value = kh.SoDienThoai;
 
             command.Parameters.Add("@email", SqlDbType.VarChar).Value = kh.Email;
 
